@@ -1,5 +1,5 @@
 {% set name = "structuretoolkit" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/structuretoolkit-{{ version }}.tar.gz
-  sha256: 6d5f9567943a32f752613650eb8850d5f9e1300e30dfd48895697403a58035dc
+  sha256: cfe918d29fb11d1deb957a806e80028fb00fec5f2a06fd7e3016239a58b9f7cc
 
 build:
   noarch: python
@@ -20,13 +20,14 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - aimsgb >=1.0.1
+    - aimsgb >=1.0.3
     - ase >=3.22.1
     - matplotlib-base >=3.7.2
     - numpy >=1.19.5  # for numba and pytorch compatibility
     - phonopy >=2.20.0
     - pymatgen >=2023.7.20
     - pyscal >=2.10.18
+    - pyxtal >=0.5.9
     - scipy >=1.11.1
     - scikit-learn >=1.3.0
     - spglib >=2.0.2
