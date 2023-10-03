@@ -11,8 +11,8 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
@@ -20,18 +20,10 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - aimsgb >=1.0.3
     - ase >=3.22.1
     - matplotlib-base >=3.7.2
-    - numpy >=1.19.5  # for numba and pytorch compatibility
-    - phonopy >=2.20.0
-    - pymatgen >=2023.8.10
-    - pyscal >=2.10.18
-    - pyxtal >=0.6.0
-    - scipy >=1.11.1
-    - scikit-learn >=1.3.0
-    - spglib >=2.0.2
-    - sqsgenerator >=0.2
+    - numpy >=1.23.5
+    - scipy >=1.11.2
 
 test:
   imports:
@@ -49,4 +41,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - niklassiemer
+    - pmrv
+    - srmnitc
+    - pyiron-runner
     - jan-janssen
