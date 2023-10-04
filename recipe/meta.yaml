@@ -8,11 +8,13 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/structuretoolkit-{{ version }}.tar.gz
   sha256: 8b49fc9651191957b081ce5b6b0a8d4eaebfd703fdd6e40118d6b002300be7ef
+  patches:
+    - versioneer.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
