@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python >=3.7
     - pip
     - ase
     - numpy
@@ -24,7 +24,7 @@ requirements:
     - versioneer
     - toml
   run:
-    - python >=3.6
+    - python >=3.7
     - ase >=3.20.1,<=3.22.1
     - matplotlib-base ==3.8.2
     - numpy >=1.23.5,<=1.26.2
