@@ -1,5 +1,5 @@
 {% set name = "structuretoolkit" %}
-{% set version = "0.0.19" %}
+{% set version = "0.0.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/structuretoolkit-{{ version }}.tar.gz
-  sha256: beabd78c14a8c6790bd268869ebd0ec1a52b823e90aa758e94d4f25ea11e5e84
+  sha256: 42dc7cc13d0eb84390d8600f2136e1d6d244ebaba913119977ae0f69e308c97d
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
   run:
     - python >=3.7
     - ase >=3.20.1,<=3.22.1
-    - numpy >=1.23.5,<=1.26.3
+    - numpy >=1.23.5,<=1.26.4
     - scipy >=1.9.3,<=1.12.0
 
 test:
