@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/structuretoolkit-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/structuretoolkit-{{ version }}.tar.gz
   sha256: 24a46aba9f7e77972afe7ef821501f64763ab7ce1c6ac3620ccbc9c44580952d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - ase
     - numpy
@@ -24,7 +24,7 @@ requirements:
     - versioneer
     - toml
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - ase >=3.20.1,<=3.23.0
     - numpy >=1.23.5,<=1.26.4
     - scipy >=1.9.3,<=1.14.1
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyiron/structuretoolkit
