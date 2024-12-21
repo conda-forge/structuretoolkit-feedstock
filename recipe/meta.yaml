@@ -23,6 +23,7 @@ requirements:
     - scipy
     - versioneer
     - toml
+    - setuptools
   run:
     - python >={{ python_min }}
     - ase >=3.20.1,<=3.23.0
