@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: structuretoolkit
-  version: "0.0.35"
+  version: "0.0.36"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/structuretoolkit-${{ version }}.tar.gz
-  sha256: ef19cc705ac5065f87c26a4399bad176fcf369aa2d6b29bc553f7758458befdd
+  sha256: 70a0c82e99b2b71c514493212f69b1400023ec34e870b591dd164b57e276aed1
   patches:
     - py313.patch
 
