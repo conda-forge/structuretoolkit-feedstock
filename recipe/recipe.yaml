@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: structuretoolkit
-  version: "0.0.38"
+  version: "0.0.39"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/structuretoolkit-${{ version }}.tar.gz
-  sha256: 815a0cf764cb0a82332e1e9f6b19bddb9e27dc2d2bb389ba089725a05bb1cddc
+  sha256: e8307d7d1007631b14c690230c9592c32706f082450423539503a2ac189f7395
 
 build:
   number: 0
