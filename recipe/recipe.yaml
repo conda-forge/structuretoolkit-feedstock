@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: structuretoolkit
-  version: "0.0.41"
+  version: 0.0.42
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/structuretoolkit-${{ version }}.tar.gz
-  sha256: 41dbd1184d1715a42e9513f7a72fb59cb58c97e363e92a251377f4296dfc07f5
+  sha256: 759f1efa69c0f51e03af1e8aee0edea3652b1fa63ab04b6885223717e0c51821
   patches:
     - scipy.patch
 
@@ -32,8 +32,7 @@ requirements:
     - python >=${{ python_min }}
     - ase >=3.20.1,<=3.28.0
     - numpy >=1.23.5,<=2.4.3
-    - scipy >=1.9.3,<=1.17.1
-
+    - scipy >=1.15.0,<=1.17.1
 tests:
   - python:
       imports:
