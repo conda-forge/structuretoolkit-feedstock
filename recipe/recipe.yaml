@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: structuretoolkit
-  version: "0.0.44"
+  version: "0.0.45"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/structuretoolkit-${{ version }}.tar.gz
-  sha256: 822ddc91c628e6e435c394415126103d22225ec012c3fd5664b8158e1a14f01b
+  sha256: d9b79906c6bfc053b741c4adfc8b512ba808196c71d34b020976c39f625b8566
 
 build:
   number: 0
@@ -28,9 +28,10 @@ requirements:
     - hatch-vcs
   run:
     - python >=${{ python_min }}
-    - ase >=3.20.1,<=3.28.0
+    - ase >=3.20.1,<=3.29.0
     - numpy >=1.23.5,<=2.4.6
     - scipy >=1.15.0,<=1.17.1
+    - typing_extensions  # ase requires it
 tests:
   - python:
       imports:
